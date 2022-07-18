@@ -3,21 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
     <link type="text/html" rel="stylesheet" href="" />
     <title>Vue3 Widget</title>
+    <script defer="defer" src="./js/chunk-vendors.8c0f9e4c.js"></script>
+    <script defer="defer" src="./js/app.97f209dd.js"></script>
+    <link href="./css/app.adde7f70.css" rel="stylesheet" />
   </head>
   <body>
-    <form action="#" method="get" id="filter">
+    <form action="#" id="filter">
       <div
         class="items-filter filter"
         data-field="categories"
         data-url="https://lobster.tools/api/v1/categories"
         data-selected="[27, 29]"
-        data-applyName=""
+        data-applyname=""
       ></div>
-
       <div
         class="items-filter filter"
         data-field="projects"
@@ -25,21 +27,18 @@
         data-selected="[]"
         data-apply-name=""
       ></div>
-
       <div
         class="items-filter filter"
         data-field="items"
         data-url="https://lobster.tools/api/v1/projects"
         data-selected="[]"
-        data-applyName=""
+        data-applyname=""
       ></div>
-
       <div class="__form__actions">
         <input type="submit" value="Send" class="__btn" />
       </div>
     </form>
   </body>
-
   <style>
     #filter {
       display: flex;
