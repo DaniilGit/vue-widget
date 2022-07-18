@@ -149,7 +149,7 @@ export default {
       formData.append("limit", 50);
       formData.append("offset", this.offset);
 
-      const res = await fetch(`${this.url}`, {
+      const res = await fetch(this.url, {
         method: "post",
         headers: { Authorization: "Bearer BT3HK2NpCnyrKiDo" },
         body: formData,
