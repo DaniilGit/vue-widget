@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <link type="text/html" rel="stylesheet" href="" />
+    <title>Vue3 Widget</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <form action="#" method="get" id="filter">
+      <div
+        class="items-filter filter"
+        data-field="categories"
+        data-url="https://lobster.tools/api/v1/categories"
+        data-selected="[27, 29]"
+        data-applyName="123"
+      ></div>
+
+      <div
+        class="items-filter filter"
+        data-field="projects"
+        data-url="https://lobster.tools/api/v1/projects"
+        data-selected="[]"
+        data-apply-name=""
+      ></div>
+
+      <div
+        class="items-filter filter"
+        data-field="items"
+        data-url="https://lobster.tools/api/v1/projects"
+        data-selected="[]"
+        data-applyName=""
+      ></div>
+
+      <div class="__form__actions">
+        <input type="submit" value="Send" class="__btn" />
+      </div>
+    </form>
   </body>
+
+  <style>
+    #filter {
+      display: flex;
+    }
+
+    #filter .items-filter {
+      margin-right: 20px;
+    }
+  </style>
 </html>

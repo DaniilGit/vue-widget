@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+.__select__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  margin: 0 auto;
+}
+.__select {
+  display: flex;
+  width: 230px;
+  height: 204px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  border-radius: 5px;
+  border: solid 1px #c7ccd1;
+}
+
+.__select__header {
+  position: relative;
+}
+.__select__inner {
+  position: absolute;
+  top: 27px;
+  flex-direction: column;
+}
+.__select-active .__select__inner {
+  display: flex;
+}
+
+.__select__selected {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px #c7ccd1;
+}
+.__select__clear {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.__select__actions {
+  display: flex;
+  align-items: center;
+}
+.__select__link {
+  width: 35%;
+}
+.__select__search {
+  width: 65%;
+  border: solid 1px #c7ccd1;
+}
+
+.__select__content {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  width: 100%;
+
+  overflow-y: auto;
+  overflox-x: hidden;
+}
+
+.reset {
+  display: flex;
+  width: 230px;
+  padding: 8px 16px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+  border: solid 1px #c7ccd1;
+  border-radius: 5px;
+
+  transition: all 0.2s ease-out;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.reset:hover {
+  background-color: #d8093a;
+  color: #ffffff;
+}
+
+.__select__input {
+  display: none;
+}
+
+.__select__input:checked + label {
+  background-color: #dedede;
+}
+.__select__input:disabled + label {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.__select__label {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0 16px;
+
+  transition: all 0.2s ease-out;
+
+  cursor: pointer;
+}
+
+.__select__label + input {
+  border-top: 1px solid #c7ccd160;
+}
+
+.__select__label:hover {
+  background-color: #d8093a !important;
+
+  color: #ffffff;
+}
+
+.__select__text {
+  padding: 5px;
+}
+.__select__footer {
+  position: absolute;
+  top: 233px;
+}
+.__btn {
+  border-radius: 5px;
+  border: solid 1px #c7ccd1;
+  padding: 4px 13px;
+  cursor: pointer;
+}
+
+.items-filter {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.items-filter:not(:last-child) {
+  float: left;
+}
+
+.__form__actions {
+}
+.__select__d-none {
+  display: none;
+}

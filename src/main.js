@@ -1,4 +1,13 @@
 import { createApp } from "vue";
-import App from "./App.vue";
+import VueWidget from "./components/VueWidget.vue";
 
-createApp(App).mount("#app");
+const filters = document.querySelectorAll(".filter");
+
+filters.forEach((filter) => {
+  const app = createApp({
+    ...VueWidget,
+    dataset: { ...filter.dataset },
+  });
+
+  app.mount(filter);
+});
